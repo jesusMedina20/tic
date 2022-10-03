@@ -1,5 +1,5 @@
-import logo from "./logo.svg";
 import "./App.css";
+import { useState } from "react";
 
 const winnerPositions = [
   [0, 1, 2],
