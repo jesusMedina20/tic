@@ -1,5 +1,5 @@
 import classNames from "classnames";
-
+import "./square.css";
 const Square = ({ value, onClick, turn, winner }) => {
   const handleClick = () => {
     turn !== null && value === null && onClick();

@@ -1,5 +1,5 @@
 import Square from "./Square";
-
+import "./Board.css";
 const Board = ({ squares, onClick, turn, winningSquares }) => {
   const createSquares = (values) =>
     values.map((value) => (
