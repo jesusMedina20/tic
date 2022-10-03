@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Board from "./components/board";
+import { ResetButton } from "./components/resetButton";
 import ScoreBoard from "./components/ScoreBoard";
 
 const winningPositions = [
@@ -21,6 +22,14 @@ const App = () => {
     X: 0,
     O: 0,
   });
+  const resetBoard = () => {
+    setSquares(Array(9).fill(null));
+    setWinningSquares([]);
+    setScore({
+      X: 0,
+      O: 0,
+    });
+  };
 
   const reset = () => {
     setTurn("X");
@@ -76,6 +85,7 @@ const App = () => {
         onClick={handleClick}
       />
       <ScoreBoard scoreO={score.O} scoreX={score.X} />
+      <ResetButton resetBoard={resetBoard} />
     </div>
   );
 };
